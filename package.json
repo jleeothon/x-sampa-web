@@ -1,0 +1,30 @@
+{
+  "name": "x-sampa-web",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "js-base64": "^2.5.1",
+    "strict-uri-encode": "^2.0.0",
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "x-sampa": "^0.3.1"
+  },
+  "devDependencies": {
+    "@vue/cli": "^3.5.0",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "husky": "^1.3.1",
+    "sort-package-json": "^1.21.0",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
