@@ -8,9 +8,7 @@
       placeholder='/h@"l@U "w3:ld/'
     ></textarea>
     <hr />
-    <div id="output" class="inoutput output">
-      <pre>{{ output }}</pre>
-    </div>
+    <div id="output" class="inoutput output" v-html="output"></div>
   </div>
 </template>
 
@@ -18,6 +16,7 @@
 import strictUriEncode from 'strict-uri-encode';
 import translate from 'x-sampa';
 import autosize from 'autosize';
+import escapeGoat from 'escape-goat';
 
 function updateAlignment(value, targets) {
   targets.forEach((el) => {
@@ -39,7 +38,10 @@ export default {
       },
     },
     output() {
-      return translate(this.$store.state.input);
+      const translated = translate(this.$store.state.input);
+      const escaped = escapeGoat.escape(translated);
+      const withLineBreaks = escaped.replace(/\n/g, '<br>');
+      return withLineBreaks;
     },
     alignment() {
       return this.input.search(/\n/g) ? 'align-left' : 'align-right';
