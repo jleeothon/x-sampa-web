@@ -58,15 +58,14 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "DejaVu Sans";
+  src: url("/DejaVuSans.ttf");
+}
+
 .x-sampa-form {
   padding-left: 5vw;
   padding-right: 5vw;
-}
-
-.input {
-  border: none;
-  width: 100%;
-  resize: none;
 }
 
 .inoutput {
@@ -81,7 +80,13 @@ export default {
   text-align: center;
 }
 
-pre {
-  font-family: inherit;
+.input {
+  border: none;
+  width: 100%;
+  resize: none;
+}
+
+.output {
+  font-family: "DejaVu Sans";
 }
 </style>
