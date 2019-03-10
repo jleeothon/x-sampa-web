@@ -1,7 +1,11 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import Vue from 'vue';
+import decodeUriComponent from 'decode-uri-component';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+
+// eslint-disable-next-line
+import 'modern-normalize';
 
 Vue.config.productionTip = false;
 
@@ -9,7 +13,7 @@ new Vue({
   router,
   store,
   render: h => h(App),
-  created: function() {
-    this.$store.commit("setInput", this.$route.query.q);
-  }
-}).$mount("#app");
+  created() {
+    this.$store.commit('setInput', decodeUriComponent(this.$route.query.q));
+  },
+}).$mount('#app');

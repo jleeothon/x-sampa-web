@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import XSampaForm from "@/components/XSampaForm.vue";
+import XSampaForm from '@/components/XSampaForm.vue';
 
 export default {
-  name: "x-sampa-view",
+  name: 'x-sampa-view',
   components: {
-    XSampaForm
-  }
+    XSampaForm,
+  },
 };
 </script>
