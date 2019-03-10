@@ -19,10 +19,8 @@ import autosize from 'autosize';
 import escapeGoat from 'escape-goat';
 
 function updateAlignment(value, targets) {
-  targets.forEach((el) => {
-    const method = value.trim().search(/\n/g) > -1 ? 'add' : 'remove';
-    el.classList[method]('align-left');
-  });
+  const method = value.trim().search(/\n/g) > -1 ? 'add' : 'remove';
+  targets.forEach(el => el.classList[method]('align-left'));
 }
 
 export default {
@@ -51,7 +49,7 @@ export default {
     const input = document.querySelector('#input');
     const inputOutput = document.querySelectorAll('.inoutput');
     updateAlignment(input.value, inputOutput);
-    input.addEventListener('input', event => updateAlignment(event.target.value, inputOutput));
+    input.addEventListener('input', e => updateAlignment(e.target.value, inputOutput));
     autosize(input);
     autosize.update(input);
     input.focus();
