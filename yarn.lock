@@ -8643,9 +8643,9 @@ ws@^6.0.0:
   dependencies:
     async-limiter "~1.0.0"
 
-x-sampa@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/x-sampa/-/x-sampa-0.3.1.tgz#5b90b167f46702e6ef8198130d13311f23c379f6"
+x-sampa@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/x-sampa/-/x-sampa-0.3.2.tgz#575f033ae97280f5b327bbc74bf9886356b69819"
   dependencies:
     split-at "^1.2.0"
 
