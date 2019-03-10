@@ -21,7 +21,7 @@ import autosize from 'autosize';
 
 function updateAlignment(value, targets) {
   targets.forEach((el) => {
-    const method = value.search(/\n/g) > -1 ? 'add' : 'remove';
+    const method = value.trim().search(/\n/g) > -1 ? 'add' : 'remove';
     el.classList[method]('align-left');
   });
 }
@@ -36,7 +36,6 @@ export default {
       set(value) {
         this.$store.commit('setInput', value);
         this.$router.push({ path: '/', query: { q: strictUriEncode(value) } });
-        autosize.update(input);
       },
     },
     output() {
@@ -53,6 +52,7 @@ export default {
     input.addEventListener('input', event => updateAlignment(event.target.value, inputOutput));
     autosize(input);
     autosize.update(input);
+    input.focus();
   },
 };
 </script>
